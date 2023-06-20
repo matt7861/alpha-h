@@ -3,7 +3,7 @@
 .collections {
   padding: 3.75rem 1.5rem;
   @include breakpoint(up, lg) {
-    padding: 3.75rem 5.25rem;
+    padding: 4.75rem 5.25rem;
   }
   &__container {
     display: flex;
