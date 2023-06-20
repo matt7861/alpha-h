@@ -1,0 +1,69 @@
+@import "../../styles/_include-media";
+
+.hero {
+  margin-top: -3.75rem;
+  position: relative;
+  height: calc(100vh - 2.5rem);
+  @include breakpoint(up, xlm) {
+    min-height: 48.75rem;
+    margin-top: 0;
+    height: calc(100vh - 9.375rem);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  &__text {
+    position: absolute;
+    bottom: unset;
+    top: 6.25rem;
+    left: 0;
+    color: var(--white);
+    max-width: 38.1rem;
+    padding: 0 1.5rem;
+    @include breakpoint(up, lg) {
+      bottom: 3.75rem;
+      left: 3.75rem;
+      top: unset;
+    }
+    span,
+    h3 {
+      color: var(--dark-grey);
+    }
+
+    h1,
+    h3,
+    p {
+      margin-bottom: 1.2rem;
+      @include breakpoint(up, lg) {
+        margin-bottom: 1.6rem;
+      }
+    }
+
+    p {
+      font-weight: 300;
+    }
+  }
+
+  &__button {
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 1rem 1.5rem;
+    transition: ease-in-out 0.25s background-color;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    max-width: 100%;
+    font-weight: 500;
+    @include breakpoint(up, lg) {
+      width: 18.125rem;
+    }
+    &:hover {
+      background-color: var(--copper);
+    }
+  }
+}

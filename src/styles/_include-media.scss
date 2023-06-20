@@ -1,0 +1,34 @@
+$sm: 36em; // Mobile
+$md: 48em; // Tablet - Portrait
+$lg: 64em; // Tablet - Landscape
+$xl: 75em; // Large Desktop
+$xlm: 80em; // Large Desktop
+$xxl: 120em; // Larger Desktop
+
+@mixin breakpoint($direction, $size) {
+  @if $size== "sm" {
+    $size: $sm;
+  } @else if $size== "md" {
+    $size: $md;
+  } @else if $size== "lg" {
+    $size: $lg;
+  } @else if $size== "xl" {
+    $size: $xl;
+  } @else if $size== "xlm" {
+    $size: $xlm;
+  } @else if $size== "xxl" {
+    $size: $xxl;
+  }
+
+  @if $direction== "up" {
+    $direction: "min-width";
+  } @else if $direction== "down" {
+    $direction: "max-width";
+    $size: $size - 1;
+  }
+
+  // Now for the actual content!
+  @media ($direction: $size) {
+    @content;
+  }
+}

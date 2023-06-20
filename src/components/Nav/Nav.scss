@@ -1,0 +1,116 @@
+@import "../../styles/_include-media";
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+  z-index: 1;
+  @include breakpoint(up, xlm) {
+    padding: 1.9rem 5.5rem;
+    background-color: var(--white);
+  }
+
+  .logo {
+    height: 1.6rem;
+    @include breakpoint(up, xlm) {
+      height: 1.8rem;
+    }
+    path {
+      fill: var(--white);
+      @include breakpoint(up, xlm) {
+        fill: var(--dark-grey);
+      }
+    }
+  }
+
+  .menu-icon {
+    display: block;
+    height: 1.25rem;
+    @include breakpoint(up, xlm) {
+      display: none;
+    }
+  }
+
+  &__main-nav {
+    flex-grow: 1;
+    display: none;
+    @include breakpoint(up, xlm) {
+      display: block;
+    }
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      gap: 1.5rem;
+      a {
+        color: var(--dark-grey);
+        transition: ease-in-out 0.25s color;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--copper);
+        }
+      }
+    }
+  }
+
+  &__side-links {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+
+    @include breakpoint(up, xlm) {
+      margin-left: 4rem;
+    }
+    a {
+      path,
+      circle,
+      rect {
+        @include breakpoint(up, xlm) {
+          transition: ease-in-out 0.25s all;
+        }
+      }
+      &:hover svg {
+        path,
+        circle,
+        rect {
+          stroke: var(--copper);
+        }
+      }
+
+      &:nth-of-type(1),
+      &:nth-of-type(3) {
+        display: none;
+        @include breakpoint(up, xlm) {
+          display: block;
+        }
+      }
+
+      &:nth-of-type(1) svg {
+        height: 1.3rem;
+      }
+      &:nth-of-type(2) svg {
+        height: 1.4rem;
+        rect,
+        path {
+          stroke: var(--white);
+        }
+        @include breakpoint(up, xlm) {
+          rect,
+          path {
+            stroke: var(--dark-grey);
+          }
+        }
+      }
+      &:nth-of-type(3) svg {
+        height: 2.1rem;
+        margin-bottom: -0.2rem;
+      }
+    }
+  }
+}
