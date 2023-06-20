@@ -1,7 +1,7 @@
-
 ```
 alpha-h
 ├─ .eslintrc.cjs
+├─ .gitattributes
 ├─ .gitignore
 ├─ index.html
 ├─ package-lock.json
@@ -33,20 +33,37 @@ alpha-h
 │  │  │  ├─ Morion-UltraLight.woff
 │  │  │  └─ Morion-UltraLight.woff2
 │  │  └─ images
-│  │     └─ hero.jpg
+│  │     ├─ collection-1.jpg
+│  │     ├─ collection-2.jpg
+│  │     ├─ collection-3.jpg
+│  │     ├─ hero-image-desktop.jpg
+│  │     └─ hero-image-mobile.jpg
 │  ├─ components
 │  │  ├─ Banner
 │  │  │  ├─ Banner.jsx
 │  │  │  └─ Banner.scss
+│  │  ├─ Card
+│  │  │  ├─ Card.jsx
+│  │  │  └─ Card.scss
+│  │  ├─ Collections
+│  │  │  ├─ Collections.jsx
+│  │  │  └─ Collections.scss
+│  │  ├─ Hero
+│  │  │  ├─ Hero.jsx
+│  │  │  └─ Hero.scss
 │  │  ├─ Icons
 │  │  │  ├─ Bag.jsx
+│  │  │  ├─ CloseIcon.jsx
 │  │  │  ├─ Logo.jsx
+│  │  │  ├─ MenuIcon.jsx
 │  │  │  ├─ Person.jsx
 │  │  │  └─ Search.jsx
-│  │  ├─ Nav
-│  │  │  ├─ Nav.jsx
-│  │  │  └─ Nav.scss
-│  │  └─ UI
+│  │  ├─ MenuOverlay
+│  │  │  ├─ MenuOverlay.jsx
+│  │  │  └─ MenuOverlay.scss
+│  │  └─ Nav
+│  │     ├─ Nav.jsx
+│  │     └─ Nav.scss
 │  ├─ main.jsx
 │  └─ styles
 │     ├─ index.scss
